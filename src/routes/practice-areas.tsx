@@ -1,4 +1,3 @@
-<<<<<<<
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import scalesImg from "@/assets/scales.jpg";
