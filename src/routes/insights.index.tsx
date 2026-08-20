@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import { CtaBanner } from "@/components/CtaBanner";
 import { ARTICLES, formatDate } from "@/lib/site";
 
-export const Route = createFileRoute("/insights")({
+export const Route = createFileRoute("/insights/")({
   head: () => ({
     meta: [
       { title: "Legal Insights | Boss Legal Associates" },
