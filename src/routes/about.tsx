@@ -2,9 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { HeartHandshake, Gavel, Eye, Clock } from "lucide-react";
 import handshakeImg from "@/assets/handshake.jpg";
 import officeImg from "@/assets/office.jpg";
+import founderAsset from "@/assets/founder.png.asset.json";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { CtaBanner } from "@/components/CtaBanner";
+
+const founderImg = founderAsset.url;
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -70,42 +73,130 @@ const pillars = [
   },
 ];
 
+const qualifications = [
+  "Doctor of Philosophy (Ph.D.) in Law — Maryland State University (USA).",
+  "Master of Laws (LL.M.) — Jindal Global Law School (Institution of Eminence), O.P. Jindal Global University.",
+  "14+ Years of Active Legal Practice — extensive experience in bridging complex legal frameworks with actionable, real-world solutions.",
+];
+
+const honours = [
+  "Dr. A.P.J. Abdul Kalam Bharat Puraskar — Conferred in recognition of outstanding professional contributions and unwavering commitment to excellence.",
+  "Bharat Gaurav Ratna Shri Sammaan Award — Awarded for remarkable achievements in the legal field and significant leadership in women's empowerment.",
+  "Government of India Honour — Felicitated for exceptional contributions toward the advancement of human rights and women's welfare.",
+  "Advocate Excellence Award — Recognised for exemplary legal service, professional integrity, and steadfast dedication to social justice.",
+];
+
 function About() {
   return (
     <>
       <PageHero
         eyebrow="About Us"
-        title="A modern practice grounded in traditional professional values"
-        intro="Boss Legal Associates is a legal practice based in CBD Belapur, Navi Mumbai, advising individuals, families and businesses on contentious and advisory matters."
+        title="Welcome to Boss Legal Associates"
+        intro="A premier full-service law firm dedicated to providing exceptional legal strategy, compassionate advocacy, and transformative solutions."
         image={handshakeImg}
       />
 
       <section className="bg-background py-24">
         <div className="container-page grid gap-14 lg:grid-cols-[1fr_1.15fr]">
           <Reveal>
-            <p className="eyebrow">Our Mission</p>
+            <p className="eyebrow">Who We Are</p>
             <h2 className="mt-4 text-3xl leading-tight md:text-4xl">
-              Clear counsel, carefully executed
+              A firm built on integrity, knowledge and purpose
             </h2>
             <span className="gold-rule mt-6" />
           </Reveal>
           <Reveal delay={120} className="space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              Our mission is to provide legal representation that is rigorous in
-              preparation and straightforward in communication. We believe clients
-              are best served when they understand not only what the law permits,
-              but what it will practically take to achieve a result.
+              Welcome to Boss Legal Associates, a premier full-service law firm
+              dedicated to providing exceptional legal strategy, compassionate
+              advocacy, and transformative solutions. Built on a foundation of
+              integrity, deep industry knowledge, and academic rigor, our
+              practice bridges high-level global legal standards with impactful
+              local execution.
             </p>
             <p>
-              The firm handles matters across litigation and advisory work, and
-              maintains a deliberate balance between the two. Contentious
-              experience informs the documents we draft; advisory work keeps our
-              litigation grounded in commercial reality.
+              With a multidisciplinary team of 15+ dedicated legal
+              professionals, researchers, and support staff, Boss Legal
+              Associates handles complex legal matters with precision,
+              confidentiality, and an unyielding commitment to justice. Whether
+              advising corporate entities or advocating for systemic change, we
+              tailor our strategies to protect our clients' interests and secure
+              meaningful outcomes.
             </p>
-            <p>
-              Confidentiality is absolute. Every engagement is handled with the
-              discretion that professional obligations and client trust require.
-            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-secondary py-24">
+        <div className="container-page grid items-start gap-14 lg:grid-cols-2">
+          <Reveal>
+            <p className="eyebrow">Leadership</p>
+            <h2 className="mt-4 text-3xl leading-tight md:text-4xl">
+              About the Founder
+            </h2>
+            <span className="gold-rule mt-6" />
+            <div className="mt-8">
+              <h3 className="font-serif text-2xl text-foreground md:text-3xl">
+                Dr. Kiran Chachlani
+              </h3>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-gold">
+                Founder & Managing Director
+              </p>
+            </div>
+            <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+              <p>
+                Dr. Kiran Chachlani is a distinguished advocate and legal
+                scholar whose career spans over 14 years of impactful legal
+                practice. Renowned for combining international academic research
+                with domestic legal expertise, she stands as one of the rare
+                Indian women advocates to hold an international doctoral degree
+                in legal studies.
+              </p>
+              <p>
+                Throughout her career, Dr. Chachlani has balanced high-stakes
+                legal advocacy with a profound dedication to pro bono service,
+                grassroots leadership, and the empowerment of marginalised
+                communities. Her contributions to the legal field, human
+                rights, and social justice have earned her widespread national
+                and international recognition.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <img
+              src={founderImg}
+              alt="Dr. Kiran Chachlani, Founder & Managing Director"
+              loading="lazy"
+              width={1024}
+              height={1280}
+              className="w-full object-cover shadow-[var(--shadow-lift)]"
+            />
+          </Reveal>
+
+          <Reveal className="lg:col-span-2">
+            <div className="grid gap-10 md:grid-cols-2">
+              <div>
+                <h4 className="font-serif text-xl text-foreground">
+                  Key Qualifications & Credentials
+                </h4>
+                <ul className="mt-5 list-disc space-y-3 pl-5 text-muted-foreground">
+                  {qualifications.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-serif text-xl text-foreground">
+                  Honours & Recognitions
+                </h4>
+                <ul className="mt-5 list-disc space-y-3 pl-5 text-muted-foreground">
+                  {honours.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
