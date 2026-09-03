@@ -3,9 +3,9 @@ export const FIRM = {
   tagline: "Committed to Justice. Dedicated to Excellence.",
   address:
     "Office No. 403, Mayuresh Square, Plot No. 17, Sector 15, CBD Belapur, Navi Mumbai, Maharashtra – 400601",
-  phone: "+91 XXXXX XXXXX",
+  phone: "+91 77009 91774",
   email: "contact@bosslegalassociates.in",
-  whatsapp: "https://wa.me/91XXXXXXXXXX",
+  whatsapp: "https://wa.me/917700991774",
 } as const;
 
 export const NAV = [

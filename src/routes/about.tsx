@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HeartHandshake, Gavel, Eye, Clock } from "lucide-react";
 import handshakeImg from "@/assets/handshake.jpg";
-import officeImg from "@/assets/office.jpg";
+import officeConferenceAsset from "@/assets/office-conference.png.asset.json";
 import founderAsset from "@/assets/founder.png.asset.json";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
@@ -268,11 +268,11 @@ function About() {
           </Reveal>
           <Reveal delay={120}>
             <img
-              src={officeImg}
-              alt="Law office conference room with city view"
+              src={officeConferenceAsset.url}
+              alt="Boss Legal Associates conference room at the CBD Belapur office"
               loading="lazy"
-              width={1280}
-              height={960}
+              width={1229}
+              height={769}
               className="w-full object-cover shadow-[var(--shadow-lift)]"
             />
           </Reveal>
