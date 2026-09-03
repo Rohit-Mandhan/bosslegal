@@ -70,9 +70,9 @@ function Contact() {
               </li>
               <li className="flex gap-4">
                 <Phone className="size-5 shrink-0 text-gold" strokeWidth={1.5} />
-                <span className="text-muted-foreground">
-                  {FIRM.phone} <span className="text-xs italic">(to be updated)</span>
-                </span>
+                <a href={`tel:${FIRM.phone.replace(/\s/g, "")}`} className="text-muted-foreground transition-colors hover:text-gold">
+                  {FIRM.phone}
+                </a>
               </li>
               <li className="flex gap-4">
                 <Mail className="size-5 shrink-0 text-gold" strokeWidth={1.5} />
